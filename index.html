@@ -2,22 +2,30 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mes Histoires</title>
+<title>Heart — The home of feelings</title>
 
 <style>
     body {
-        background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
-        color: #f0f0f0;
+        background: linear-gradient(135deg, #ffb6c1, #ffe4e1); /* Fond pastel doux */
+        color: #1a1a1a;
         font-family: Georgia, serif;
         margin: 0;
         padding: 20px;
     }
 
+    header {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 2em;
+        font-weight: bold;
+        color: #800000; /* Couleur du titre */
+    }
+
     .story {
-        background-color: rgba(255,255,255,0.05);
+        background-color: rgba(255,255,255,0.7);
         padding: 30px;
         border-radius: 15px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
         max-width: 800px;
         margin: 40px auto;
         white-space: pre-wrap;
@@ -27,7 +35,7 @@
         margin-top: 20px;
         font-weight: bold;
         text-align: right;
-        color: #ccc;
+        color: #555;
     }
 
     audio {
@@ -36,6 +44,8 @@
 </style>
 </head>
 <body>
+
+<header>Heart — The home of feelings</header>
 
 <audio id="bgMusic" loop>
     <source src="klem message.mp3" type="audio/mpeg">
