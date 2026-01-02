@@ -6,7 +6,7 @@
 
 <style>
     body {
-        background-color: #bfbfbf; /* gris doux */
+        background-color: #bfbfbf; /* fond gris */
         font-family: Georgia, serif;
         margin: 0;
         padding: 20px;
@@ -14,7 +14,7 @@
         overflow: hidden;
     }
 
-    /* roses noires en fond */
+    /* Roses noires en fond */
     body::before {
         content: "";
         position: fixed;
@@ -25,7 +25,7 @@
         background-image: url('https://i.imgur.com/7rH1F9C.png'); /* exemple rose noire */
         background-repeat: repeat;
         background-size: 150px 150px;
-        opacity: 0.2; /* semi-transparent */
+        opacity: 0.2;
         pointer-events: none;
         z-index: 0;
     }
@@ -63,26 +63,54 @@
     audio {
         display: none; /* cache l'audio */
     }
+
+    /* Overlay pour demander le son */
+    #musicOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        text-align: center;
+        padding: 20px;
+    }
+
+    #musicOverlay button {
+        margin-top: 20px;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        background-color: #800000;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    #musicOverlay button:hover {
+        background-color: #a00000;
+    }
 </style>
 </head>
 <body>
 
 <header>Heart — The home of feelings</header>
 
+<div id="musicOverlay">
+    <h2>Do you want to listen to background music for a better experience?</h2>
+    <button id="playMusicButton">Yes, I want music</button>
+</div>
+
 <audio id="bgMusic" loop>
     <source src="klem message.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
-
-<script>
-    // Joue la musique après le premier clic sur la page
-    document.body.addEventListener('click', function() {
-        var audio = document.getElementById('bgMusic');
-        if(audio.paused){
-            audio.play();
-        }
-    }, { once: true });
-</script>
 
 <div class="story">
 Today it’s 1st January 2026, my name is Jean BELLIER.
@@ -243,6 +271,16 @@ Isn’t it crazy how a heart can react?
 
 <footer>— Jean BELLIER</footer>
 </div>
+
+<script>
+    // Bouton pour lancer la musique
+    document.getElementById('playMusicButton').addEventListener('click', function() {
+        var audio = document.getElementById('bgMusic');
+        audio.play();
+        // Supprime l'overlay après clic
+        document.getElementById('musicOverlay').style.display = 'none';
+    });
+</script>
 
 </body>
 </html>
