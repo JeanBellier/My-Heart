@@ -2,39 +2,39 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For you</title>
+<title>Mes Histoires</title>
 
 <style>
     body {
         background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
         color: #f0f0f0;
         font-family: Georgia, serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
         margin: 0;
         padding: 20px;
-        line-height: 1.7;
-        font-size: 18px;
     }
 
-    .poem {
-        max-width: 800px;
-        white-space: pre-wrap;
-        text-align: left;
-        background-color: rgba(255, 255, 255, 0.05);
+    .story {
+        background-color: rgba(255,255,255,0.05);
         padding: 30px;
         border-radius: 15px;
         box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        max-width: 800px;
+        margin: 40px auto;
+        white-space: pre-wrap;
+    }
+
+    .story footer {
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: right;
+        color: #ccc;
     }
 
     audio {
-        display: none; /* contrôle invisible pour autoplay sur mobile */
+        display: none;
     }
 </style>
 </head>
-
 <body>
 
 <audio autoplay loop controls>
@@ -42,7 +42,7 @@
     Your browser does not support the audio element.
 </audio>
 
-<div class="poem">
+<div class="story">
 Today it’s 1st January 2026, my name is Jean BELLIER.
 You may ask me why I am writing this. I don’t even know myself.
 I just feel broken.
@@ -198,6 +198,8 @@ I needed to let it out.
 
 All this text because of a notification…
 Isn’t it crazy how a heart can react?
+
+<footer>— Jean BELLIER</footer>
 </div>
 
 </body>
