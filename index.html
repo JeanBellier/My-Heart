@@ -31,16 +31,26 @@
     }
 
     audio {
-        display: none;
+        display: none; /* cache l'audio */
     }
 </style>
 </head>
 <body>
 
-<audio autoplay loop controls>
+<audio id="bgMusic" loop>
     <source src="klem message.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+
+<script>
+    // Joue la musique après le premier clic sur la page
+    document.body.addEventListener('click', function() {
+        var audio = document.getElementById('bgMusic');
+        if(audio.paused){
+            audio.play();
+        }
+    }, { once: true });
+</script>
 
 <div class="story">
 Today it’s 1st January 2026, my name is Jean BELLIER.
