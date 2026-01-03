@@ -6,15 +6,15 @@
 
 <style>
     body {
-        background-color: #bfbfbf; /* gris doux */
-        font-family: Georgia, serif;
         margin: 0;
-        padding: 20px;
-        position: relative;
+        padding: 40px 20px;
+        font-family: Georgia, serif;
+        background-color: #bdbdbd; /* gris doux */
+        color: #1a1a1a;
         overflow-x: hidden;
     }
 
-    /* Roses noires simulées par CSS */
+    /* Fond décoratif – roses noires stylisées */
     body::before {
         content: "";
         position: fixed;
@@ -23,117 +23,209 @@
         width: 100%;
         height: 100%;
         background-image:
-            radial-gradient(circle at 20px 20px, rgba(0,0,0,0.15) 5px, transparent 6px),
-            radial-gradient(circle at 80px 120px, rgba(0,0,0,0.15) 5px, transparent 6px),
-            radial-gradient(circle at 200px 50px, rgba(0,0,0,0.15) 5px, transparent 6px),
-            radial-gradient(circle at 300px 180px, rgba(0,0,0,0.15) 5px, transparent 6px);
-        background-repeat: repeat;
-        background-size: 150px 150px;
+            radial-gradient(circle at 20% 30%, rgba(0,0,0,0.08) 8px, transparent 9px),
+            radial-gradient(circle at 70% 60%, rgba(0,0,0,0.08) 8px, transparent 9px),
+            radial-gradient(circle at 40% 80%, rgba(0,0,0,0.08) 8px, transparent 9px),
+            radial-gradient(circle at 85% 20%, rgba(0,0,0,0.08) 8px, transparent 9px);
+        background-size: 200px 200px;
         z-index: 0;
         pointer-events: none;
     }
 
     header {
         text-align: center;
-        margin-top: 20px;
-        font-size: 2em;
+        font-size: 2.4em;
+        margin-bottom: 40px;
         font-weight: bold;
-        color: #1a1a1a;
         position: relative;
         z-index: 1;
     }
 
     .story {
-        background-color: rgba(255,255,255,0.8);
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 0 20px rgba(0,0,0,0.3);
         max-width: 800px;
-        margin: 40px auto;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.85);
+        padding: 40px;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
         white-space: pre-wrap;
+        line-height: 1.7;
         position: relative;
         z-index: 1;
-        color: #1a1a1a;
     }
 
-    .story footer {
-        margin-top: 20px;
-        font-weight: bold;
+    .signature {
+        margin-top: 30px;
         text-align: right;
-        color: #333;
-    }
-
-    audio {
-        display: none;
-    }
-
-    /* Overlay musique */
-    #musicOverlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.85);
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 100;
-        text-align: center;
-        padding: 20px;
-        overflow: auto;
-    }
-
-    #musicOverlay button {
-        margin-top: 20px;
-        padding: 15px 30px;
-        font-size: 1.2em;
-        background-color: #800000;
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-
-    #musicOverlay button:hover {
-        background-color: #a00000;
+        font-weight: bold;
+        font-style: italic;
     }
 </style>
 </head>
+
 <body>
 
 <header>Heart — The home of feelings</header>
 
-<div id="musicOverlay">
-    <h2>Do you want to listen to background music for a better experience?</h2>
-    <button id="playMusicButton">Yes, I want music</button>
-</div>
-
-<audio id="bgMusic" loop>
-    <source src="klem message.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
 <div class="story">
-<!-- Ton texte complet ici -->
 Today it’s 1st January 2026, my name is Jean BELLIER.
 You may ask me why I am writing this. I don’t even know myself.
 I just feel broken.
 
-[... le texte complet ...]
+My first day of 2026 was maybe the worst I ever had.
 
-<footer>— Jean BELLIER</footer>
+I’m going to make a little context if you read this.
+
+When I was in CM2, I played Roblox and met a girl so incredible that even Disney princesses were jealous of her.
+She was a pure beauty, physically and mentally.
+I loved her and could do anything for her, ANYTHING.
+We were happy together, I’m not joking, maybe the happiest couple in the world.
+
+A year passed, or maybe more, and she decided to leave me because of her parents.
+I was so affected, and because I didn’t want to lose this diamond, the sunshine of my life,
+I tried my best to have her back.
+She saw I really loved her and decided to get back with me.
+I was literally the happiest man on Earth at this moment.
+
+A year passed again and she decided to leave me because she found another boy.
+She told me he was better in everything than what I was.
+I was destroyed and cried a lot.
+I still tried to stay in contact with her because I loved her
+and wished to get back with her.
+
+After all the time spent and all I had done for her, she came back to me.
+
+Even with this, my love for her didn’t become less strong,
+but it’s after this that problems came up.
+From a girl full of love and happiness,
+always cheering me up and loving me,
+she changed.
+She became depressive.
+
+Of course my love didn’t change.
+I still loved her so much.
+Helping her and cheering her up even more
+wasn’t a problem for me.
+
+My main goal was to make her come back like before,
+like if I was a doctor helping his patient.
+
+A year passed again and she broke up with me
+because of her mom who didn’t accept me.
+
+I was broken.
+My heart started showing marks of break,
+but I still did my best to get her back.
+
+After a few weeks, she came back,
+but my love for her sadly changed a bit
+because of how she was treating me.
+
+I thought it was a game for her to break up.
+
+But still, we loved each other and were happy.
+
+Until it was my turn to say stop.
+
+I was jealous and overprotective.
+I couldn’t let her have a boy as a friend.
+We broke up because of me this time.
+
+After that, I spoke to her friend.
+He told me they were in a relationship
+and that my ex was a bitch.
+
+I didn’t understand.
+I texted her.
+She said she left him.
+
+I felt so good.
+
+We got back together.
+
+Time passed.
+She told me she had a guy best friend.
+I didn’t trust him.
+I asked her to leave him.
+She didn’t.
+
+Then her birthday arrived.
+I even made a Roblox map for her.
+She loved it.
+
+She told me she was doing a party at her house.
+A boy was coming to the sleepover.
+
+Later she told me that this boy
+would sleep in the same bed as her.
+
+I begged her to make him sleep on the couch.
+She didn’t.
+
+I closed my eyes and let it pass
+because I didn’t want to lose her again.
+
+Time passed.
+We broke up again.
+
+I tried to come back when I saw on her story:
+“I loved him so bad.”
+
+We went back together.
+I swore I wouldn’t leave her again.
+
+But school came back,
+and everything came back to my head:
+the cheating,
+the boy “better than me”,
+the sleepover.
+
+Add to this the stress,
+my parents forcing me to work,
+my grandfather’s death,
+one of my pets dying,
+her lies,
+her depression,
+self-harm,
+and a crash video I couldn’t believe.
+
+All of this broke me.
+
+I took distance.
+I left her.
+I didn’t tell her the real reason.
+
+Now we are here.
+
+A simple Snapchat notification destroyed me again.
+
+It’s always me who comes back.
+Never her.
+
+I’m in my bed at Preignan,
+writing this in the dark
+while my parents sleep,
+tears in my eyes.
+
+I don’t hate her.
+I never did.
+
+When I’m with her,
+every other woman disappears.
+She is the light that blinds me
+more than every star in the sky.
+
+My love was real.
+My pain was real.
+
+If you read this, thank you.
+I needed to let it out.
+
+All this text because of a notification…
+Isn’t it crazy how a heart can react?
+
+<div class="signature">— Jean BELLIER</div>
 </div>
-
-<script>
-    document.getElementById('playMusicButton').addEventListener('click', function() {
-        var audio = document.getElementById('bgMusic');
-        audio.play();
-        document.getElementById('musicOverlay').style.display = 'none';
-    });
-</script>
 
 </body>
 </html>
