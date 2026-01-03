@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Heart — The home of feelings</title>
+<title>Heart — The Home of Feelings</title>
 
 <style>
     body {
         margin: 0;
-        padding: 40px 20px;
+        padding: 0;
         font-family: Georgia, serif;
-        background-color: #bdbdbd; /* gris doux */
+        background-color: #c2c2c2;
         color: #1a1a1a;
         overflow-x: hidden;
     }
 
-    /* Fond décoratif – roses noires stylisées */
+    /* Motif discret sombre */
     body::before {
         content: "";
         position: fixed;
@@ -23,51 +23,127 @@
         width: 100%;
         height: 100%;
         background-image:
-            radial-gradient(circle at 20% 30%, rgba(0,0,0,0.08) 8px, transparent 9px),
-            radial-gradient(circle at 70% 60%, rgba(0,0,0,0.08) 8px, transparent 9px),
-            radial-gradient(circle at 40% 80%, rgba(0,0,0,0.08) 8px, transparent 9px),
-            radial-gradient(circle at 85% 20%, rgba(0,0,0,0.08) 8px, transparent 9px);
-        background-size: 200px 200px;
-        z-index: 0;
+            radial-gradient(circle at 30px 30px, rgba(0,0,0,0.08) 6px, transparent 7px),
+            radial-gradient(circle at 120px 160px, rgba(0,0,0,0.08) 6px, transparent 7px),
+            radial-gradient(circle at 260px 90px, rgba(0,0,0,0.08) 6px, transparent 7px);
+        background-size: 180px 180px;
         pointer-events: none;
+        z-index: 0;
     }
 
     header {
         text-align: center;
-        font-size: 2.4em;
-        margin-bottom: 40px;
+        padding: 40px 20px 10px;
+        font-size: 2.3em;
         font-weight: bold;
         position: relative;
         z-index: 1;
     }
 
+    header span {
+        display: block;
+        font-size: 0.5em;
+        font-weight: normal;
+        margin-top: 10px;
+        color: #333;
+    }
+
     .story {
-        max-width: 800px;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.85);
+        max-width: 900px;
+        margin: 40px auto 80px;
+        background: rgba(255, 255, 255, 0.85);
         padding: 40px;
         border-radius: 18px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.25);
         white-space: pre-wrap;
         line-height: 1.7;
         position: relative;
         z-index: 1;
+        display: none;
     }
 
     .signature {
-        margin-top: 30px;
+        margin-top: 40px;
         text-align: right;
         font-weight: bold;
-        font-style: italic;
+        font-size: 1.1em;
+    }
+
+    /* Overlay avertissement */
+    #warning {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.88);
+        color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        padding: 20px;
+    }
+
+    .warning-box {
+        max-width: 700px;
+        background: rgba(20,20,20,0.95);
+        padding: 40px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(0,0,0,0.6);
+    }
+
+    .warning-box h2 {
+        margin-bottom: 20px;
+        font-size: 1.8em;
+    }
+
+    .warning-box p {
+        font-size: 1.05em;
+        line-height: 1.6;
+    }
+
+    .warning-box button {
+        margin-top: 30px;
+        padding: 15px 35px;
+        font-size: 1.1em;
+        font-family: Georgia, serif;
+        background-color: #800000;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .warning-box button:hover {
+        background-color: #a00000;
     }
 </style>
 </head>
 
 <body>
 
-<header>Heart — The home of feelings</header>
+<div id="warning">
+    <div class="warning-box">
+        <h2>Content Warning</h2>
+        <p>
+            What you are about to read was written by a heart, not by a controlled mind.<br><br>
+            It contains raw emotions, vulnerability, and personal memories.<br><br>
+            This is not a story meant to impress, convince, or blame anyone.<br>
+            It is simply the honest expression of feelings that needed to be written.<br><br>
+            If you choose to continue, you accept to read it with respect and empathy.
+        </p>
+        <button onclick="acceptWarning()">I understand and I accept</button>
+    </div>
+</div>
 
-<div class="story">
+<header>
+    Heart
+    <span>The Home of Feelings</span>
+</header>
+
+<div class="story" id="story">
 Today it’s 1st January 2026, my name is Jean BELLIER.
 You may ask me why I am writing this. I don’t even know myself.
 I just feel broken.
@@ -226,6 +302,13 @@ Isn’t it crazy how a heart can react?
 
 <div class="signature">— Jean BELLIER</div>
 </div>
+
+<script>
+function acceptWarning() {
+    document.getElementById("warning").style.display = "none";
+    document.getElementById("story").style.display = "block";
+}
+</script>
 
 </body>
 </html>
